@@ -29,42 +29,40 @@ public class DialTests
     }
 
     [Fact]
-    public void RotateLeft_ThrowsArgumentOutOfRangeException_WhenDistanceIsLessThan1()
+    public void RotateLeft_ThrowsArgumentException_WhenDistanceIsNegative()
     {
         var dial = new Dial();
-        var act = () => dial.RotateLeft(0);
-        act.Should().Throw<ArgumentOutOfRangeException>();
+        var act = () => dial.RotateLeft(-1);
+        act.Should().Throw<ArgumentException>();
     }
 
     [Fact]
-    public void RotateLeft_ThrowsArgumentOutOfRangeException_WhenDistanceIsGreaterThan99()
+    public void RotateRight_ThrowsArgumentException_WhenDistanceIsNegative()
     {
         var dial = new Dial();
-        var act = () => dial.RotateLeft(100);
-        act.Should().Throw<ArgumentOutOfRangeException>();
-    }
-
-    [Fact]
-    public void RotateRight_ThrowsArgumentOutOfRangeException_WhenDistanceIsLessThan1()
-    {
-        var dial = new Dial();
-        var act = () => dial.RotateRight(0);
-        act.Should().Throw<ArgumentOutOfRangeException>();
-    }
-
-    [Fact]
-    public void RotateRight_ThrowsArgumentOutOfRangeException_WhenDistanceIsGreaterThan99()
-    {
-        var dial = new Dial();
-        var act = () => dial.RotateRight(100);
-        act.Should().Throw<ArgumentOutOfRangeException>();
+        var act = () => dial.RotateRight(-1);
+        act.Should().Throw<ArgumentException>();
     }
 
     [Theory]
+    [InlineData(0, 50)]
+    [InlineData(1, 49)]
     [InlineData(10, 40)]
     [InlineData(50, 0)]
     [InlineData(60, 90)]
     [InlineData(99, 51)]
+    [InlineData(100, 50)]
+    [InlineData(101, 49)]
+    [InlineData(110, 40)]
+    [InlineData(150, 0)]
+    [InlineData(160, 90)]
+    [InlineData(199, 51)]
+    [InlineData(200, 50)]
+    [InlineData(201, 49)]
+    [InlineData(210, 40)]
+    [InlineData(250, 0)]
+    [InlineData(260, 90)]
+    [InlineData(299, 51)]
     public void RotateLeft_ReducesPositionCorrectly(int distance, int expected)
     {
         var dial = new Dial();
@@ -73,10 +71,24 @@ public class DialTests
     }
 
     [Theory]
+    [InlineData(0, 50)]
+    [InlineData(1, 51)]
     [InlineData(10, 60)]
     [InlineData(50, 0)]
     [InlineData(60, 10)]
     [InlineData(99, 49)]
+    [InlineData(100, 50)]
+    [InlineData(101, 51)]
+    [InlineData(110, 60)]
+    [InlineData(150, 0)]
+    [InlineData(160, 10)]
+    [InlineData(199, 49)]
+    [InlineData(200, 50)]
+    [InlineData(201, 51)]
+    [InlineData(210, 60)]
+    [InlineData(250, 0)]
+    [InlineData(260, 10)]
+    [InlineData(299, 49)]
     public void RotateRight_IncreasesPositionCorrectly(int distance, int expected)
     {
         var dial = new Dial();

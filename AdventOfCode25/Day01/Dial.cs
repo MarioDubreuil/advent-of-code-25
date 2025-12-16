@@ -10,7 +10,8 @@ public class Dial
     
     public void RotateLeft(int distance)
     {
-        Guard.Against.OutOfRange(distance, nameof(distance), 1, 99);
+        Guard.Against.Negative(distance, nameof(distance));
+        distance %= 100;
         _position -= distance;
         if (_position < 0)
         {
@@ -20,7 +21,8 @@ public class Dial
     
     public void RotateRight(int distance)
     {
-        Guard.Against.OutOfRange(distance, nameof(distance), 1, 99);
+        Guard.Against.Negative(distance, nameof(distance));
+        distance %= 100;
         _position += distance;
         if (_position > 99)
         {

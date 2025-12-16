@@ -1,6 +1,25 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a24b0ea6_002Dadb1_002D4d0b_002D819f_002D64d90674f812/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="DialTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ATestInvoker_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2025_002E2_003Fresharper_002Dhost_003FSourcesCache_003F5e14a4e27990972fa4ae94975603bd298aaf328ee083c03b10569ee4724d57_003FTestInvoker_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AThrowHelper_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2025_002E2_003Fresharper_002Dhost_003FSourcesCache_003F4743f513c7ddc8411223a46f0ca426ed929391acebcff993721dff2f0c6b34_003FThrowHelper_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=71e8c489_002D60b4_002D42ca_002Dbd50_002Dff7203f97820/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="ApplySequence_IncreasesLeftPointingAtZeroCorrectly" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::149FE1F0-CA2A-4AB5-B3A8-10807E14501D::net9.0::AdventOfCode25.Tests.Day01.RotationSequenceTests.ApplySequence_MultiSteps_IncreasesLeftPointingAtZeroCorrectly&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::149FE1F0-CA2A-4AB5-B3A8-10807E14501D::net9.0::AdventOfCode25.Tests.Day01.DialTests.RotateLeft_ReducesPositionCorrectly&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::149FE1F0-CA2A-4AB5-B3A8-10807E14501D::net9.0::AdventOfCode25.Tests.Day01.DialTests.Constructor_InitializesPositionTo50&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::149FE1F0-CA2A-4AB5-B3A8-10807E14501D::net9.0::AdventOfCode25.Tests.Day01.DialTests.RotateLeft_WrapsAroundAtZero&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::149FE1F0-CA2A-4AB5-B3A8-10807E14501D::net9.0::AdventOfCode25.Tests.Day01.DialTests.RotateRight_WrapsAroundAt100&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::149FE1F0-CA2A-4AB5-B3A8-10807E14501D::net9.0::AdventOfCode25.Tests.Day01.DialTests.RotateLeft_ThrowsArgumentOutOfRangeException_WhenDistanceIsNegative&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::149FE1F0-CA2A-4AB5-B3A8-10807E14501D::net9.0::AdventOfCode25.Tests.Day01.DialTests.RotateLeft_ThrowsArgumentException_WhenDistanceIsNegative&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::149FE1F0-CA2A-4AB5-B3A8-10807E14501D::net9.0::AdventOfCode25.Tests.Day01.DialTests.RotateRight_ThrowsArgumentOutOfRangeException_WhenDistanceIsNegative&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::149FE1F0-CA2A-4AB5-B3A8-10807E14501D::net9.0::AdventOfCode25.Tests.Day01.DialTests.RotateRight_ThrowsArgumentException_WhenDistanceIsNegative&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::149FE1F0-CA2A-4AB5-B3A8-10807E14501D::net9.0::AdventOfCode25.Tests.Day01.DialTests.RotateRight_IncreasesPositionCorrectly&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::149FE1F0-CA2A-4AB5-B3A8-10807E14501D::net9.0::AdventOfCode25.Tests.Day01.DialTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a24b0ea6_002Dadb1_002D4d0b_002D819f_002D64d90674f812/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DialTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::149FE1F0-CA2A-4AB5-B3A8-10807E14501D::net9.0::AdventOfCode25.Tests.Day01.DialTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::149FE1F0-CA2A-4AB5-B3A8-10807E14501D::net9.0::AdventOfCode25.Tests.Day01.RotationSequenceTests.Constructor_InitializesLeftPointingAtZeroTo0&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::149FE1F0-CA2A-4AB5-B3A8-10807E14501D::net9.0::AdventOfCode25.Tests.Day01.RotationSequenceTests.ApplySequence_EmptySequence&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
