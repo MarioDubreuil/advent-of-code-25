@@ -28,10 +28,10 @@ public class DialTests
     }
     
     [Fact]
-    public void RotateLeft_ThrowsArgumentOutOfRangeException_WhenDistanceIsNegative()
+    public void RotateLeft_ThrowsArgumentOutOfRangeException_WhenDistanceIsLessThan1()
     {
         var dial = new Dial();
-        Assert.Throws<ArgumentOutOfRangeException>(() => dial.RotateLeft(-1));
+        Assert.Throws<ArgumentOutOfRangeException>(() => dial.RotateLeft(0));
     }
     
     [Fact]
@@ -42,10 +42,10 @@ public class DialTests
     }
     
     [Fact]
-    public void RotateRight_ThrowsArgumentOutOfRangeException_WhenDistanceIsNegative()
+    public void RotateRight_ThrowsArgumentOutOfRangeException_WhenDistanceIsLessThan1()
     {
         var dial = new Dial();
-        Assert.Throws<ArgumentOutOfRangeException>(() => dial.RotateRight(-1));
+        Assert.Throws<ArgumentOutOfRangeException>(() => dial.RotateRight(0));
     }
     
     [Fact]
@@ -56,7 +56,6 @@ public class DialTests
     }
 
     [Theory]
-    [InlineData(0, 50)]
     [InlineData(10, 40)]
     [InlineData(50, 0)]
     [InlineData(60, 90)]
@@ -69,7 +68,6 @@ public class DialTests
     }
 
     [Theory]
-    [InlineData(0, 50)]
     [InlineData(10, 60)]
     [InlineData(50, 0)]
     [InlineData(60, 10)]
