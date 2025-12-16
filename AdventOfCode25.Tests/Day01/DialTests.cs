@@ -1,4 +1,5 @@
 using AdventOfCode25.Day01;
+using FluentAssertions;
 
 namespace AdventOfCode25.Tests.Day01;
 
@@ -8,7 +9,7 @@ public class DialTests
     public void Constructor_InitializesPositionTo50()
     {
         var dial = new Dial();
-        Assert.Equal(50, dial.Position);
+        dial.Position.Should().Be(50);
     }
 
     [Fact]
@@ -16,7 +17,7 @@ public class DialTests
     {
         var dial = new Dial();
         dial.RotateLeft(60);
-        Assert.Equal(90, dial.Position);
+        dial.Position.Should().Be(90);
     }
 
     [Fact]
@@ -24,35 +25,39 @@ public class DialTests
     {
         var dial = new Dial();
         dial.RotateRight(60);
-        Assert.Equal(10, dial.Position);
+        dial.Position.Should().Be(10);
     }
-    
+
     [Fact]
     public void RotateLeft_ThrowsArgumentOutOfRangeException_WhenDistanceIsLessThan1()
     {
         var dial = new Dial();
-        Assert.Throws<ArgumentOutOfRangeException>(() => dial.RotateLeft(0));
+        var act = () => dial.RotateLeft(0);
+        act.Should().Throw<ArgumentOutOfRangeException>();
     }
-    
+
     [Fact]
     public void RotateLeft_ThrowsArgumentOutOfRangeException_WhenDistanceIsGreaterThan99()
     {
         var dial = new Dial();
-        Assert.Throws<ArgumentOutOfRangeException>(() => dial.RotateLeft(100));
+        var act = () => dial.RotateLeft(100);
+        act.Should().Throw<ArgumentOutOfRangeException>();
     }
-    
+
     [Fact]
     public void RotateRight_ThrowsArgumentOutOfRangeException_WhenDistanceIsLessThan1()
     {
         var dial = new Dial();
-        Assert.Throws<ArgumentOutOfRangeException>(() => dial.RotateRight(0));
+        var act = () => dial.RotateRight(0);
+        act.Should().Throw<ArgumentOutOfRangeException>();
     }
-    
+
     [Fact]
     public void RotateRight_ThrowsArgumentOutOfRangeException_WhenDistanceIsGreaterThan99()
     {
         var dial = new Dial();
-        Assert.Throws<ArgumentOutOfRangeException>(() => dial.RotateRight(100));
+        var act = () => dial.RotateRight(100);
+        act.Should().Throw<ArgumentOutOfRangeException>();
     }
 
     [Theory]
@@ -64,7 +69,7 @@ public class DialTests
     {
         var dial = new Dial();
         dial.RotateLeft(distance);
-        Assert.Equal(expected, dial.Position);
+        dial.Position.Should().Be(expected);
     }
 
     [Theory]
@@ -76,6 +81,6 @@ public class DialTests
     {
         var dial = new Dial();
         dial.RotateRight(distance);
-        Assert.Equal(expected, dial.Position);
+        dial.Position.Should().Be(expected);
     }
 }
