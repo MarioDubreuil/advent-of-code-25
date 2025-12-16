@@ -1,3 +1,5 @@
+using Ardalis.GuardClauses;
+
 namespace AdventOfCode25.Day01;
 
 public class Dial
@@ -8,6 +10,7 @@ public class Dial
     
     public void RotateLeft(int distance)
     {
+        Guard.Against.OutOfRange(distance, nameof(distance), 0, 99);
         _position -= distance;
         if (_position < 0)
         {
@@ -17,6 +20,7 @@ public class Dial
     
     public void RotateRight(int distance)
     {
+        Guard.Against.OutOfRange(distance, nameof(distance), 0, 99);
         _position += distance;
         if (_position >= 100)
         {
